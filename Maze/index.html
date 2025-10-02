@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maze Escape Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>🎮 Maze Escape Game</h1>
+        
+        <div class="controls">
+            <p>🔄 <strong>Controls:</strong> Arrow Keys or WASD to move | R to restart</p>
+            <p>🎯 <strong>Goal:</strong> Reach the <span class="exit-color">GREEN</span> exit while avoiding the <span class="enemy-color">RED</span> enemy!</p>
+        </div>
+        
+        <div class="game-stats">
+            <span>Time: <span id="timer">0</span>s</span>
+            <span>Moves: <span id="moves">0</span></span>
+            <span>Best Time: <span id="bestTime">--</span>s</span>
+        </div>
+        
+        <canvas id="gameCanvas" width="600" height="600"></canvas>
+        
+        <div class="instructions">
+            <h3>🎮 How to Play:</h3>
+            <ul>
+                <li>Use <strong>arrow keys</strong> or <strong>WASD</strong> to navigate the maze</li>
+                <li>Find your way to the <span class="exit-color">green exit</span></li>
+                <li>Avoid the <span class="enemy-color">red enemy</span> that chases you</li>
+                <li>Multiple paths available - choose wisely!</li>
+                <li>Press <strong>R</strong> to restart the game</li>
+            </ul>
+        </div>
+
+        <div class="features">
+            <h3>🌟 Features:</h3>
+            <div class="feature-grid">
+                <div class="feature">
+                    <span class="feature-icon">🎲</span>
+                    <span>Random Mazes</span>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">🤖</span>
+                    <span>Smart AI Enemy</span>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">🛣️</span>
+                    <span>Multiple Paths</span>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">⚡</span>
+                    <span>Fast-paced Gameplay</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="gameOver" class="game-over hidden">
+        <div class="game-over-content">
+            <h2 id="gameMessage">Game Over!</h2>
+            <div id="gameStats">
+                <p>Time: <span id="finalTime">0</span> seconds</p>
+                <p>Moves: <span id="finalMoves">0</span></p>
+                <p id="newRecord" class="hidden">🎉 New Best Time! 🎉</p>
+            </div>
+            <div class="game-over-buttons">
+                <button onclick="restartGame()" class="btn-primary">🔄 Play Again</button>
+                <button onclick="closeGameOver()" class="btn-secondary">❌ Close</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>Made with ❤️ using HTML5 Canvas & JavaScript | 
+           <a href="https://github.com/your-username/maze-game" target="_blank">View on GitHub</a>
+        </p>
+    </footer>
+
+    <script src="game.js"></script>
+</body>
+</html>
