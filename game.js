@@ -145,7 +145,7 @@ class MazeGame {
             this.keys[e.key.toLowerCase()] = false;
         });
 
-        // 移动端触摸支持
+        // 手机的移动功能
         this.canvas.addEventListener('touchstart', (e) => {
             e.preventDefault();
             this.handleTouch(e);
